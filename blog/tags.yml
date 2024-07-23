@@ -1,16 +1,36 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+uncategorized:
+  label: Uncategorized
+  permalink: /uncategorized
+  description: Tag for uncategorized posts
+blockchain:
+  label: Blockchain
+  permalink: /blockchain
+  description: Tag for blockchain related posts
+nextjs:
+  label: Nextjs
+  permalink: /nextjs
+  description: Tag for Nextjs related posts
+tutorial:
+  label: Tutorial
+  permalink: /tutorial
+  description: Tag for tutorial related posts
+solana:
+  label: Solana
+  permalink: /solana
+  description: Tag for Solana related posts
+beginner:
+  label: Beginner
+  permalink: /beginner
+  description: Tag for beginner related posts
+intermediate:
+  label: Intermediate
+  permalink: /intermediate
+  description: Tag for intermediate related posts
+advanced:
+  label: Advanced
+  permalink: /advanced
+  description: Tag for advanced related posts
+algorand:
+  label: Algorand
+  permalink: /algorand
+  description: Tag for Algorand related posts

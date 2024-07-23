@@ -5,7 +5,7 @@ import tailwindPlugin from "./plugins/tailwind-plugin.cjs";
 
 const config: Config = {
   title: "Leo's Note",
-  tagline: "Commit to memory",
+  tagline: "Sharing my insights here and building cool things with code",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -41,14 +41,14 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/HongThaiPham/hongthaipham.github.io/blob/main/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/HongThaiPham/hongthaipham.github.io/tree/main/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -61,9 +61,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "Leo's Note",
       logo: {
-        alt: "My Site Logo",
+        alt: "Leo's Note Logo",
         src: "img/logo.svg",
       },
       items: [
@@ -71,11 +71,11 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Documents",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/HongThaiPham",
           label: "GitHub",
           position: "right",
         },
@@ -88,25 +88,29 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
+              label: "Documents",
               to: "/docs/intro",
             },
           ],
         },
         {
-          title: "Community",
+          title: "Social",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "https://discordapp.com/users/496849090018279464",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://twitter.com/leopham_it",
+            },
+            {
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/in/leo-pham-1208/",
+            },
+            {
+              label: "Telegram",
+              href: "https://t.me/leopham_siro",
             },
           ],
         },
@@ -119,20 +123,19 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/HongThaiPham",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Leo's Note. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-
   } satisfies Preset.ThemeConfig,
-  plugins: [tailwindPlugin]
+  plugins: [tailwindPlugin],
 };
 
 export default config;
