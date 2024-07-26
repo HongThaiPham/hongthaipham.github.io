@@ -1,5 +1,9 @@
 ---
 title: Ink! Your Way to Decentralized Apps, A Polkadot Smart Contract Tutorial
+description: Learn how to build a simple smart contract using Ink!, Polkadot's smart contract language. Set up your development environment, write your first smart contract, compile and deploy it on the local Substrate node, and interact with it using the ink! UI.
+date: 2024-07-24
+permalink: ink-your-way-to-decentralized-apps-a-polkadot-smart-contract-tutorial
+image: https://storage.googleapis.com/parity-io-parity-prod/eawzck7.png
 authors: leopham
 tags: [blockchain, polkadot, beginner]
 ---
