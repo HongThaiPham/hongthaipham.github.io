@@ -264,6 +264,96 @@ If the test passes, you should see the following output:
 
 ![Unit test result](./assets/ink-unit-test.png)
 
+Final code:
+
+```rust
+#![cfg_attr(not(feature = "std"), no_std, no_main)]
+
+#[ink::contract]
+mod hello_world {
+    use ink::prelude::string::String;
+
+    /// Defines the storage of your contract.
+    /// Add new fields to the below struct in order
+    /// to add new static storage fields to your contract.
+    #[ink(storage)]
+    pub struct HelloMessage {
+        author: AccountId,
+        message: String,
+        count: u64,
+    }
+
+    impl HelloMessage {
+        /// Constructor that initializes the `HelloMessage` struct with default values.
+        #[ink(constructor)]
+        pub fn default() -> Self {
+            Self {
+                author: Self::env().caller(),
+                message: String::from("Hello, World!"),
+                count: Default::default(),
+            }
+        }
+
+        /// A function that returns the current state of your contract.
+        #[ink(message)]
+        pub fn get(&self) -> (AccountId, String, u64) {
+            (self.author, self.message.clone(), self.count)
+        }
+
+        /// A function that allows the caller to set a new message.
+        #[ink(message)]
+        pub fn set(&mut self, new_message: String) {
+            self.author = self.env().caller();
+            self.message = new_message;
+            self.count = self.count.checked_add(1).unwrap();
+        }
+    }
+
+    #[cfg(test)]
+    mod tests {
+        use super::*;
+
+        #[ink::test]
+        fn default_works() {
+            let accounts = ink::env::test::default_accounts::<ink::env::DefaultEnvironment>();
+
+            // Set the contract as callee and Alice as caller.
+            let contract = ink::env::account_id::<ink::env::DefaultEnvironment>();
+            ink::env::test::set_callee::<ink::env::DefaultEnvironment>(contract);
+            ink::env::test::set_caller::<ink::env::DefaultEnvironment>(accounts.alice);
+            let hello_message = HelloMessage::default();
+            assert_eq!(
+                hello_message.get(),
+                (accounts.alice, "Hello, World!".to_string(), 0)
+            );
+        }
+
+        #[ink::test]
+        fn it_works() {
+            let accounts = ink::env::test::default_accounts::<ink::env::DefaultEnvironment>();
+            // Set the contract as callee and Alice as caller.
+            let contract = ink::env::account_id::<ink::env::DefaultEnvironment>();
+            ink::env::test::set_callee::<ink::env::DefaultEnvironment>(contract);
+            ink::env::test::set_caller::<ink::env::DefaultEnvironment>(accounts.alice);
+
+            let mut hello_message = HelloMessage::default();
+            assert_eq!(
+                hello_message.get(),
+                (accounts.alice, "Hello, World!".to_string(), 0)
+            );
+             // Set Bob as caller.
+            ink::env::test::set_caller::<ink::env::DefaultEnvironment>(accounts.bob);
+
+            hello_message.set("Hello, I'm Bob".to_string());
+            assert_eq!(
+                hello_message.get(),
+                (accounts.bob, "Hello, I'm Bob".to_string(), 1)
+            );
+        }
+    }
+}
+```
+
 ## Compiling and Deploying Your Smart Contract {#compiling-and-deploying-your-smart-contract}
 
 Now that we have our smart contract ready, let's compile and deploy it on the local Substrate node.
@@ -338,3 +428,5 @@ That's it! You've successfully deployed and interacted with your first ink! smar
 ## Conclusion
 
 In this tutorial, you learned how to build a simple smart contract using `ink!`, Polkadot's smart contract language. You set up your development environment, wrote your first smart contract, compiled and deployed it on the local Substrate node, and interacted with it using the `ink!` UI.
+
+This is just the beginning of your journey into the world of decentralized applications on Polkadot. There's so much more to explore and build. I encourage you to dive deeper into the `ink!` documentation and experiment with more complex smart contracts.
