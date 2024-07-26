@@ -34,3 +34,7 @@ algorand:
   label: Algorand
   permalink: /algorand
   description: Tag for Algorand related posts
+polkadot:
+  label: Polkadot
+  permalink: /polkadot
+  description: Tag for Polkadot related posts
