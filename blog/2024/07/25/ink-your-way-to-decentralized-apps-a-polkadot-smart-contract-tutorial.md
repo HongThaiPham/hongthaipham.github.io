@@ -25,6 +25,8 @@ I'll walk you through every step, from writing your first smart contract to depl
 
 Let's get started! 🚀
 
+<!-- truncate -->
+
 ## What is Ink!? {#what-is-ink}
 
 `Ink!` is a smart contract language developed by `Parity Technologies`. First introduced in 2018, Ink! has continued to evolve, with the latest version (as of this writing) being Ink! 5.0.
