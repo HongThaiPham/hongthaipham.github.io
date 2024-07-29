@@ -363,6 +363,12 @@ Next, use the `contractTx` function to call the contract method. The `contractTx
 contractTx(api, activeAccount.address, contract, "set", {}, [message]),
 ```
 
+## Demo video
+
+You can watch the demo video to see how the DApp works.
+
+[![Hello World DApp](./assets/demo.png)](https://www.youtube.com/watch?v=NvE5zpNqncE)
+
 ## Conclusion
 
 Congratulations! You have successfully built a Hello World DApp and interacted with it on the Rococo Contract Testnet using `ink!` smart contract. This tutorial has provided a comprehensive guide to deploying a smart contract and building a frontend to interact with it.
