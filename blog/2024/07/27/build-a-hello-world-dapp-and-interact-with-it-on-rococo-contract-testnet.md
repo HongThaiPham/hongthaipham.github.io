@@ -3,6 +3,7 @@ title: Build a Hello World DApp and interact with it on Rococo Contract Testnet
 description: Learn how to build a Hello World DApp and interact with it on the Rococo Contract Testnet using ink! smart contract.
 date: 2024-07-27
 permalink: build-a-hello-world-dapp-and-interact-with-it-on-rococo-contract-testnet
+image: ./assets/demo.png
 authors: leopham
 tags: [blockchain, polkadot, beginner]
 ---
