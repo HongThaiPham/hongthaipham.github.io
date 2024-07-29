@@ -11,6 +11,8 @@ In the [previous post](../25/ink-your-way-to-decentralized-apps-a-polkadot-smart
 
 Get ready to witness your DApp come alive on a real blockchain network! Let's dive into the deployment process and experience the power of `ink!`.
 
+<!-- truncate -->
+
 ## Prerequisites
 
 Before we start, make sure you have the following prerequisites:
@@ -360,6 +362,12 @@ Next, use the `contractTx` function to call the contract method. The `contractTx
 ```typescript
 contractTx(api, activeAccount.address, contract, "set", {}, [message]),
 ```
+
+## Demo video
+
+You can watch the demo video to see how the DApp works.
+
+[![Hello World DApp](./assets/demo.png)](https://www.youtube.com/watch?v=NvE5zpNqncE)
 
 ## Conclusion
 
