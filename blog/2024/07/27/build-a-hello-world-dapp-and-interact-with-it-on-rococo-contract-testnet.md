@@ -11,6 +11,8 @@ In the [previous post](../25/ink-your-way-to-decentralized-apps-a-polkadot-smart
 
 Get ready to witness your DApp come alive on a real blockchain network! Let's dive into the deployment process and experience the power of `ink!`.
 
+<!-- truncate -->
+
 ## Prerequisites
 
 Before we start, make sure you have the following prerequisites:
